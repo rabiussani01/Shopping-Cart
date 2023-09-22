@@ -98,11 +98,14 @@ function renderProducts() {
 function openCart() {
     renderCart('cart-modal-content'); 
     document.getElementById('cart-modal').style.display = 'flex';
+    document.body.classList.add('overflow-hidden'); // Add this line
 }
 
 function closeCart() {
     document.getElementById('cart-modal').style.display = 'none';
+    document.body.classList.remove('overflow-hidden'); // Add this line
 }
+
 
 // toggle menu 
 document.querySelector('[data-collapse-toggle="navbar-sticky"]').addEventListener('click', function() {
